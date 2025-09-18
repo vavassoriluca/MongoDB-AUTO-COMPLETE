@@ -2,10 +2,11 @@
 
 Ability to provide auto-complete suggestions for a text field that appears in a set of records, when a user provides just the first few characters to search.
 
-**Maintainer**: **[Insert Name]**
-**Author**: **Luca Vavassori**
+**Author**: Luca Vavassori
+
 **Estimated Setup Time**: 20 mins
-**Estimated Execution Time**: 5 mins
+
+**Estimated Execution Time**: 5 mins 
 
 ## Description
 
