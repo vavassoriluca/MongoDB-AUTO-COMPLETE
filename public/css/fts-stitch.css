@@ -1,143 +1,92 @@
+/* fts-stitch.css */
+
+/* --- Fonts and Colors from MongoDB Palette --- */
+
+/* H1 and H2 Fonts (Value Serif) */
+h1, h2 {
+    font-family: "MongoDB Value Serif", "Times New Roman", serif;
+    color: #023430; /* Green Dark3 */
+}
+
+/* Body and Other Text Fonts (Euclid Circular A) */
+body, h3, h4, h5, h6, p, a, .tt-suggestion {
+    font-family: "Euclid Circular A", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #112733; /* Gray Dark4 */
+}
+
 body {
-    margin:10px;
+    background-color: #F9FBFA; /* Gray Light3 */
+    margin: 10px;
     padding: 10px;
 }
 
 .jumbotron {
-    background-color: white;
+    background-color: #FFFFFF;
     border-style: solid;
     border-width: 1px;
-    border-color: darkgreen;
+    border-color: #C1C7C6; /* Gray light1 */
     margin-bottom: 20px;
-
-    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-    zoom: 1;
+    box-shadow: 0px 5px 23px 0px rgba(0,0,0,0.1);
 }
 
-/* Base styles for typeahead elements */
-.twitter-typeahead {
+#box {
+    border-radius: 25px;
+    border: 1px solid #E8EDEB; /* Gray light2 */
+    box-shadow: 0 0 5px #C1C7C6; /* Gray light1 */
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
 .typeahead,
 .tt-query,
 .tt-hint {
-    height: 30px;
-    padding: 8px 12px;
+    height: 50px;
+    padding: 8px 20px;
     font-size: 24px;
     line-height: 30px;
-    border: 2px solid #ccc;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+    border: none;
     outline: none;
+    box-shadow: none;
+    background-color: transparent;
 }
 
 .typeahead {
-    background-color: #fff;
+    flex-grow: 1;
 }
 
-/* Remove the focus border */
-.typeahead:focus,
-.tt-query:focus {
-    border: 2px solid #ccc;
+.typeahead:focus {
+    border-color: transparent;
     box-shadow: none;
 }
 
-.tt-query {
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+.fa-search {
+    color: #00A35C; /* Green dark1 */
+    font-size: 32px;
+    padding: 0 15px;
 }
 
-.tt-hint {
-    color: #999;
-}
+/* --- Autocomplete Dropdown Styling --- */
 
-/* Styles for the dropdown menu */
 .tt-menu {
-    margin: 12px 0;
-    padding: 8px 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #C1C7C6; /* Gray light1 */
+    background-color: #FFFFFF;
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 8px;
+    margin-top: 5px;
 }
 
 .tt-suggestion {
-    padding: 3px 20px;
-    font-size: 18px;
-    line-height: 24px;
+    padding: 10px 20px;
 }
 
-/* Hover and active states for suggestions */
 .tt-suggestion:hover,
 .tt-suggestion.tt-cursor {
+    background-color: #E3FCF7; /* Green light3 */
+    color: #112733; /* Gray dark4 */
     cursor: pointer;
-    color: #fff;
-    background-color: darkgreen;
 }
 
-.tt-suggestion p {
-    margin: 0;
-}
-
-/* Existing styles for the rest of your app */
-input[type="text"] {
-    width: 100%;
-    height: 50px;
-    border: none;
-    padding: 0 20px;
-}
-
-.fa-search {
-    color: green;
-    padding-top: 10px;
-    font-size: 32px;
-}
-
-#myInput {
-    font-size: 2em;
-    text-align: left;
-    display: block;
-}
-
-#box {
-    border-radius: 25px;
-    border: 1px solid white;
-    box-shadow: 0 0 5px gray;
-}
-
-@media (min-width: 768px) {
-    .container-small {
-        width: 300px;
-    }
-    .container-large {
-        width: 970px;
-    }
-}
-@media (min-width: 992px) {
-    .container-small {
-        width: 500px;
-    }
-    .container-large {
-        width: 1170px;
-    }
-}
-@media (min-width: 1200px) {
-    .container-small {
-        width: 700px;
-    }
-    .container-large {
-        width: 1500px;
-    }
-}
-
-.container-small, .container-large {
-    max-width: 100%;
+.tt-suggestion.tt-cursor p {
+    color: #112733; /* Maintain color on hover */
 }
